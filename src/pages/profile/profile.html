@@ -1,0 +1,28 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Profile</ion-title>
+      <ion-buttons end>
+        <button ion-button (click)="logout()">
+          Logout &nbsp;<ion-icon color="primary" name="log-out"></ion-icon></button>
+      </ion-buttons>
+    </ion-navbar>
+
+  </ion-header>
+
+
+  <ion-content class="card-background-page">
+
+    <ion-card>
+      <img [src]="mediaProvider.uploadFilePath + ('profile' | getUserTag | async | thumbnail:'large' | async)"/>
+
+      <div class="card-title">{{ mediaProvider.user.username }}</div>
+
+      <div class="card-subtitle">{{ mediaProvider.user.full_name }}</div>
+
+      <div class="card-subtitle">{{ mediaProvider.user.email }}</div>
+    </ion-card>
+    <button ion-button block (click)="myUploads()">My Uploads</button>
+
+  </ion-content>
+

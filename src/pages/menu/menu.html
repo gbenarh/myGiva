@@ -1,0 +1,7 @@
+<ion-tabs (ionChange)="tabChanged($event)">
+  <ion-tab [root]="homeRoot" tabIcon="home" tabTitle="Home"></ion-tab>
+  <ion-tab [show]="!mediaProvider.loggedIn" [root]="loginRoot" tabIcon="log-in" tabTitle="Login"></ion-tab>
+  <ion-tab [show]="mediaProvider.loggedIn" [root]="pinsRoot" tabIcon="thumbs-up" tabTitle="Pins"></ion-tab>
+  <ion-tab [show]="mediaProvider.loggedIn" [root]="profileRoot" tabIcon="person" tabTitle="Profile"></ion-tab>
+  <ion-tab [show]="mediaProvider.loggedIn" [root]="uploadRoot" tabIcon="cloud-upload" tabTitle="Upload"></ion-tab>
+</ion-tabs>
